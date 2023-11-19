@@ -59,6 +59,9 @@ body {
 /* ============== /COMMON STYLES ============== */
 
 /* ============== HEADER STYLES ============== */
+.page-header {
+    border-bottom: 1px solid #e7e9fc;
+}
 .page-header-container {
     display: flex;
     align-items: center;
@@ -80,7 +83,7 @@ body {
 }
 .menu {
     display: flex;
-    column-gap: 40px;
+    gap: 40px;
 }
 .menu-link {
     display: block;
@@ -101,7 +104,7 @@ body {
 }
 .menu-contacts {
     display: flex;
-    column-gap: 40px;
+    gap: 40px;
 }
 .menu-contacts-item {
     display: block;
@@ -118,12 +121,10 @@ body {
 /* ============== HERO STYLES ============== */
 .hero-main {
     background-color: #2e2f42;
-    height: 600px;
-    margin-bottom: 60px;
+    padding: 188px 0;
 }
 .hero-main-title {
-    width: 500px;
-    padding-top: 188px;
+    max-width: 496px;
     padding-bottom: 48px;
     margin-left: auto;
     margin-right: auto;
@@ -137,9 +138,12 @@ body {
 }
 .hero-button {
     display: block;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 188px;
     padding: 16px 32px;
     background: #4D5AE5;
     color: #FFF;
@@ -151,21 +155,26 @@ body {
 /* ============== /HERO STYLES ============== */
 
 /* ============== HUMAN STYLES ============== */
+.human-main {
+    padding: 120px 0;
+}
 .menu-human-main {
     display: flex;
-    column-gap: 24px;
+    gap: 24px;
 }
 .memu-human-main-title {    
     font-size: 20px;
-    padding-bottom: 8px;
+    margin-bottom: 8px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2E2F42;
 }
+.menu-human-main-item {
+    width: calc((100% - 72px) / 4);
+}
 .menu-human-main-text {
     font-size: 16px;
-    margin-bottom: 60px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -176,10 +185,9 @@ body {
 /* ============== PERSONNEL STYLES ============== */
 .personnel {
     background-color: #F4F4FD;
+    padding: 120px 0;
 }
 .personnel-text {
-    margin-top: 4px;
-    margin-bottom: 32px;
     text-align: center;
     font-size: 16px;
     font-weight: 400;
@@ -204,20 +212,21 @@ body {
 .menu-personnel {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 24px;
+    gap: 24px;
     margin-bottom: 60px;
 }
 .menu-personnel-item {
     width: calc( (100% - 24px *3) /4 );
-    margin-bottom: 48px;
     border-radius: 0px 0px 4px 4px;
     background: #FFF;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+.menu-personnel-container {
+    padding: 32px 0;
+}
 .personnel-name {
     width: auto;
-    margin-top: 32px;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     text-align: center;
     font-size: 20px;
     font-weight: 500;
@@ -228,6 +237,10 @@ body {
 /* ============== /PERSONNEL STYLES ============== */
 
 /* ============== PORTFOLIO STYLES ============== */
+.portfolio {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 .portfolio-title {
     width: 220px;
     margin-top: 60px;
@@ -245,18 +258,20 @@ body {
 .menu-portfolio {
     display: flex;
     flex-wrap: wrap;
+    row-gap: 48px;
     column-gap: 24px;
     margin-bottom: 60px;
 }
 .menu-portfolio-item {
     width: calc( (100% - 24px *2) /3 );
-    margin-bottom: 48px;
-    border: 1px solid #E7E9FC;
-    background: #FFF;
+}
+.menu-portfolio-container {
+    padding: 32px 16px;
+    border-top: none;
+    margin-bottom: 8px;
+    border: 1px solid #e7e9fc;
 }
 .menu-portfolio-text {
-    margin-top: 4px;
-    margin-left: 16px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -264,29 +279,25 @@ body {
     color: #434455;
 }
 .menu-portfolio-title {
-    margin-top: 32px;
-    margin-left: 16px;
-    margin-bottom: 4px;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2E2F42;
 }
-/* ============== /PORTFOLIO STYLES ============== */
+/* ==========/PORTFOLIO STYLES ============== */
 
 /* ============== FOOTER STYLES ============== */
-.footer-block {
-    display: flex;
-    flex-direction: column;
-    padding-top: 102px;
-}
 .page-footer {
     background-color: #2e2f42;
+    padding: 100px 0;
+}
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 16px;
 }
 .footer-text {
     width: 264px;
-    padding-top: 16px;
     padding-bottom: 100px;
     font-size: 16px;
     font-weight: 400;
@@ -297,4 +308,4 @@ body {
 .logo-text {
     color: #F4F4FD;
 }
-/* ============== /FOOTER STYLES ============== */
+/* ============/FOOTER STYLES ============== */
