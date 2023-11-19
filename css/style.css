@@ -1,3 +1,16 @@
+/* ============== COMMON STYLES ============== */
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+img {
+    display: block;
+}
 .list {
     list-style-type: none;
 }
@@ -11,7 +24,7 @@ button:hover,
 button:focus {
     background-color: #404BBF;
 }
-span {
+.accent-color {
     color: #2e2f42;
 }
 body {
@@ -19,20 +32,64 @@ body {
     color: #434455;
     background-color: #FFFFFF;
 }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.container {
+    width: 1158px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+/* ============== /COMMON STYLES ============== */
+
+/* ============== HEADER STYLES ============== */
+.page-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.page-nav {
+    display: flex;
+    align-items: center;
+}
 .logo {
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 1.17;
     letter-spacing: 0.03em;
+    margin-right: 76px;
     text-transform: uppercase;
     color: #4d5ae5;
 }
+.menu {
+    display: flex;
+    column-gap: 40px;
+}
 .menu-link {
+    display: block;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding-top: 24px;
+    padding-bottom: 24px;
     color:  #2E2F42;
 }
 .menu-link:hover, .menu-link:focus, 
@@ -42,17 +99,34 @@ body {
 .contacts {
     font-style: normal;
 }
+.menu-contacts {
+    display: flex;
+    column-gap: 40px;
+}
 .menu-contacts-item {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
 }
+/* ============== /HEADER STYLES ============== */
+
+/* ============== HERO STYLES ============== */
 .hero-main {
     background-color: #2e2f42;
+    height: 600px;
+    margin-bottom: 60px;
 }
 .hero-main-title {
+    width: 500px;
+    padding-top: 188px;
+    padding-bottom: 48px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     font-size: 56px;
     font-style: normal;
@@ -62,6 +136,11 @@ body {
     color: #ffffff;
 }
 .hero-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 188px;
+    padding: 16px 32px;
     background: #4D5AE5;
     color: #FFF;
     font-size: 16px;
@@ -69,8 +148,16 @@ body {
     line-height: 1.5;
     letter-spacing: 0.04em;
 }
+/* ============== /HERO STYLES ============== */
+
+/* ============== HUMAN STYLES ============== */
+.menu-human-main {
+    display: flex;
+    column-gap: 24px;
+}
 .memu-human-main-title {    
     font-size: 20px;
+    padding-bottom: 8px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -78,15 +165,21 @@ body {
 }
 .menu-human-main-text {
     font-size: 16px;
+    margin-bottom: 60px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
 }
+/* ============== /HUMAN STYLES ============== */
+
+/* ============== PERSONNEL STYLES ============== */
 .personnel {
     background-color: #F4F4FD;
 }
 .personnel-text {
+    margin-top: 4px;
+    margin-bottom: 32px;
     text-align: center;
     font-size: 16px;
     font-weight: 400;
@@ -95,6 +188,11 @@ body {
     color: #434455;
 }
 .personnel-title {
+    width: 164px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;
     text-align: center;
     font-size: 36px;
     font-weight: 700;
@@ -103,10 +201,23 @@ body {
     text-transform: capitalize;
     color: #2E2F42;
 }
+.menu-personnel {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    margin-bottom: 60px;
+}
 .menu-personnel-item {
-    background-color: #FFFFFF;
+    width: calc( (100% - 24px *3) /4 );
+    margin-bottom: 48px;
+    border-radius: 0px 0px 4px 4px;
+    background: #FFF;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .personnel-name {
+    width: auto;
+    margin-top: 32px;
+    margin-bottom: 4px;
     text-align: center;
     font-size: 20px;
     font-weight: 500;
@@ -114,7 +225,15 @@ body {
     letter-spacing: 0.02em;
     color: #2E2F42;
 }
+/* ============== /PERSONNEL STYLES ============== */
+
+/* ============== PORTFOLIO STYLES ============== */
 .portfolio-title {
+    width: 220px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;
     text-align: center;
     font-size: 36px;
     font-weight: 700;
@@ -123,7 +242,21 @@ body {
     text-transform: capitalize;
     color: #2E2F42;
 }
+.menu-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    margin-bottom: 60px;
+}
+.menu-portfolio-item {
+    width: calc( (100% - 24px *2) /3 );
+    margin-bottom: 48px;
+    border: 1px solid #E7E9FC;
+    background: #FFF;
+}
 .menu-portfolio-text {
+    margin-top: 4px;
+    margin-left: 16px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -131,16 +264,30 @@ body {
     color: #434455;
 }
 .menu-portfolio-title {
+    margin-top: 32px;
+    margin-left: 16px;
+    margin-bottom: 4px;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2E2F42;
 }
+/* ============== /PORTFOLIO STYLES ============== */
+
+/* ============== FOOTER STYLES ============== */
+.footer-block {
+    display: flex;
+    flex-direction: column;
+    padding-top: 102px;
+}
 .page-footer {
     background-color: #2e2f42;
 }
 .footer-text {
+    width: 264px;
+    padding-top: 16px;
+    padding-bottom: 100px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -150,3 +297,4 @@ body {
 .logo-text {
     color: #F4F4FD;
 }
+/* ============== /FOOTER STYLES ============== */
